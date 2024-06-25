@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kintsugi-Store</title>
+    <link rel="stylesheet" href="productos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <ul class="menu-area">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">productos</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <li class="car" >
+            <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+              <div id="carrito" class="dropdown-menu">
+                <table id="lista-carrito" class="table">
+
+        <div class="menu-icons">
+            <a href="#"><img src="image/buscar.png" alt="Buscar"></a>
+            <a href="#"><img src="image/corazon.png" alt="Favoritos"></a>
+        </div>
+    </header>
+
+
+</li>
+
+          <thead>
+              <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+
+      <a href="#" id="vaciar-carrito" class="button-vaciar">Vaciar Carrito</a>
+      <a href="#" id="procesar-pedido" class="button-pedido">Procesar Compra</a>
+  </div>
+</li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<main>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<img src="" alt="" class="modal-img" id="modal-img">
+</div>
+<div class="modal-boton" id="modal-boton">X</div>
+</div>
+
+<div class="container-productos" id="lista-productos">
+
+<div class="card">
+<img src="assets/img/ropa1.jpeg" class="card-img">
+<h5>Ropa Hello Kitty</h5>
+<p>SKU: ROP0000074</p>
+<p>S/.<small class="precio">18</small></p>
+<a href="#" class="button agregar-carrito" data-id="1">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/juguete1.png" class="card-img">
+<h5>Pelota Soga Nudo Grande Colores</h5>
+<p>SKU: JUG0000005</p>
+<p>S/.<small class="precio">14</small></p>
+<a href="#" class="button agregar-carrito" data-id="2">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/alimento1.webp" class="card-img">
+<h5>Pack Yogy Helado para perros 100% Natural 100g de Barker</h5>
+<p>SKU: BPY4UND</p>
+<p>S/.<small class="precio">24</small></p>
+<a href="#" class="button agregar-carrito" data-id="3">Comprar</a>
+</div>
+
+<div class="card">
+<img src="assets/img/alimento2.webp" class="card-img">
+<h5>Dingo Dental Mini Bones 7und x70gr</h5>
+<p>SKU: DDMB7U70GR</p>
+<p>S/.<small class="precio">26</small></p>
+<a href="#" class="button agregar-carrito" data-id="4">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/juguete3.webp" class="card-img">
+<h5>Hartz - Duraplay Ball Medium</h5>
+<p>SKU: HDB04</p>
+<p>S/.<small class="precio">35</small></p>
+<a href="#" class="button agregar-carrito" data-id="5">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/ropa2.jpeg" class="card-img">
+<h5>Ropa Avengers</h5>
+<p>SKU: ROP0000023</p>
+<p>S/.<small class="precio">21</small></p>
+<a href="#" class="button agregar-carrito" data-id="6">Comprar</a>
+</div>
+
+<div class="card">
+<img src="assets/img/juguete2.webp" class="card-img">
+<h5>Animal Planet Juguete P/Mascota Medium</h5>
+<p>SKU: AP-D794-011</p>
+<p>S/.<small class="precio">29</small></p>
+<a href="#" class="button agregar-carrito" data-id="7">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/ropa3.webp" class="card-img">
+<h5>Hoodie Hotdogz Mr. Charlie</h5>
+<p>SKU: HTD-TSH023-1</p>
+<p>S/.<small class="precio">90</small></p>
+<a href="#" class="button agregar-carrito" data-id="8">Comprar</a>
+</div>
+<div class="card">
+<img src="assets/img/alimento3.webp" class="card-img">
+<h5>Hills PD Metabolic Treats</h5>
+<p>SKU: HPDMT</p>
+<p>S/.<small class="precio">45</small></p>
+<a href="#" class="button agregar-carrito" data-id="9">Comprar</a>
+</div>
+
+</div>
+</main>
+
+
+ <!-- Tu contenido principal aquí -->
+    
+ <footer class="footer">
+    <div class="container-footer">
+        <div class="menu-footer">
+            <div class="contact-info">
+                <p class="title-footer">Información de Contacto</p>
+                <ul>
+                    <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                    <li>Teléfono: 123-456-7890</li>
+                    <li>Fax: 55555300</li>
+                    <li>Email: Kintsugi-Store@gmail.com</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="facebook">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="twitter">
+                        <img src="img/x.png" alt="Twitter">
+                    </a>
+                    <a href="#" class="youtube">
+                        <img src="img/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="#" class="pinterest">
+                        <img src="img/pinterest.png" alt="Pinterest">
+                    </a>
+                    <a href="#" class="instagram">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="information">
+                <p class="title-footer">Información</p>
+                <ul>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="#">Información Delivery</a></li>
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="my-account">
+                <p class="title-footer">Mi cuenta</p>
+                <ul>
+                    <li><a href="#">Mi cuenta</a></li>
+                    <li><a href="#">Historial de órdenes</a></li>
+                    <li><a href="#">Lista de deseos</a></li>
+                    <li><a href="#">Boletín</a></li>
+                    <li><a href="#">Reembolsos</a></li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <p class="title-footer">Boletín Informativo</p>
+                <div class="content">
+                    <p>Suscríbete a nuestros boletines ahora y mantente al día con nuevas colecciones y ofertas exclusivas.</p>
+                    <input type="email" placeholder="Ingresa tu correo aquí...">
+                    <button>Suscríbete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Desarrollado por Programación para el mundo &copy; 2024</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script  src="js/scripts2.js"></script>    
+    <script  src="js/app.js"></script>    
+    <script  src="js/carrito.js"></script>
+    <script  src="js/compra.js"></script>
+    <script  src="js/contacto.js"></script>
+    <script  src="js/pedido.js"></script>
+    <script  src="js/scipt1.js"></script>
+    <script  src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: 'Poppins', sans-serif; /* Utiliza la fuente Poppins */
+    background-color: #000000; /* Color de fondo negro */
+    color: #eee; /* Color de texto blanco */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+}
+
+/* Estilos para elementos SVG */
+svg {
+    width: 25px; /* Tamaño estándar para SVG */
+}
+
+/* Estilos para el contenedor del encabezado */
+.header-container {
+    width: 100%; /* Ancho máximo del contenedor */
+    max-width: 1200px; /* Ancho máximo permitido */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interior del contenedor */
+    display: flex; /* Utiliza flexbox para disposición */
+    justify-content: space-between; /* Distribuye los elementos alrededor */
+    align-items: center; /* Alinea verticalmente los elementos */
+    position: relative; /* Posición relativa para zIndex */
+    z-index: 100; /* Capa z-index para superposición */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+/* Estilos para el logo */
+.logo {
+    margin-left: auto; /* Empuja el logo hacia la derecha */
+    
+}
+
+.logo img {
+    width:180px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción original del logo */
+}
+
+
+/* Estilos para el área de menú */
+.menu-area {
+    display: flex; /* Utiliza flexbox para disposición */
+    gap: 30px; /* Espacio entre los elementos del menú */
+    margin-left: auto; /* Márgen izquierdo automático */
+}
+
+.menu-area li {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0 10px; /* Márgenes para cada elemento del menú */
+}
+
+.menu-area li a {
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    position: relative; /* Posición relativa para seudoelementos */
+    transition: color 0.3s; /* Transición de color al pasar el cursor */
+}
+
+/* Estilos para los efectos de subrayado */
+.menu-area li a:after,
+.menu-area li a:before {
+    content: ''; /* Contenido vacío para seudoelementos */
+    position: absolute; /* Posición absoluta para seudoelementos */
+    width: 0; /* Ancho inicial cero */
+    height: 2px; /* Altura del subrayado */
+    background: linear-gradient(to right, #ff00cc, #00dbde); /* Gradiente lineal */
+    transition: width 0.3s, opacity 0.3s, left 0.3s; /* Transiciones */
+    opacity: 0; /* Opacidad inicial cero */
+    bottom: -2px; /* Posicionamiento respecto al borde inferior */
+}
+
+.menu-area li a:after {
+    left: 50%; /* Posicionamiento inicial del seudoelemento */
+}
+
+.menu-area li a:before {
+    right: 50%; /* Posicionamiento inicial del seudoelemento */
+}
+
+.menu-area li a:hover:after,
+.menu-area li a:hover:before {
+    width: 100%; /* Ancho completo al pasar el cursor */
+    opacity: 1; /* Opacidad completa al pasar el cursor */
+    left: 0; /* Alineación a la izquierda al pasar el cursor */
+}
+
+/* Estilos para iconos del menú */
+.menu-icons {
+    display: flex; /* Utiliza flexbox para disposición */
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.menu-icons img {
+    width: 30px; /* Tamaño de imagen */
+    height: 30px; /* Altura de imagen */
+    transition: all .3s ease-in-out; /* Transición suave */
+}
+
+.menu-icons img:hover {
+    transform: scale(1.2); /* Aumenta tamaño al pasar el cursor */
+}

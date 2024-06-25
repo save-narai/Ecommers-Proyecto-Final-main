@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kintsugi-Store</title>
+    <link rel="stylesheet" href="contacto.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+
+    <header class="header-container">
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <ul class="menu-area">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">productos</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+         
+        <li class="car"><a href="carrito.html">
+            <svg class="bi bi-cart3" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg></a>
+        </li>
+        </ul>
+
+        <div class="menu-icons">
+            <a href="#"><img src="image/buscar.png" alt="Buscar"></a>
+            <a href="#"><img src="image/corazon.png" alt="Favoritos"></a>
+        </div>
+    </header>
+
+    <!-- Primera seccion Banner  "Jennifer" -->
+    <section>
+        <div class="dj-banner">
+            <div class="dj-bg">
+                <img src="img/1334619.jpeg" alt="Principal Image" class="dj-img"/>
+                <div class="dj-text">
+                    <h1><b>Contactanos</b></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa interactivo -->
+    <section class="mainEncuentranos">
+        <div class="encuentranos">
+            <div class="textoMapa">
+                <h2>DANGO-SHOT EN TU CIUDAD</h2>
+                <p> Usa nuestro mapa interactivo para encontrar las tiendas Dango-Shot más cercanas.</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8610826703334!2d-74.13984192976167!3d4.618860932123584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ebaca191fa3%3A0x28079add05f37b00!2sCentro%20Comercial%20Plaza%20de%20las%20Am%C3%A9ricas!5e0!3m2!1ses-419!2sco!4v1719003166976!5m2!1ses-419!2sco" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <div class="container">
+        <form id="survey-form" action="https://formspree.io/your_email_here" method="POST" data-redirect="gracias.html">
+            <h1 id="title" class="text-center">Contáctanos</h1>
+            <div class="form-group">
+                <label id="name-label" for="name">Nombre</label>
+                <input class="form-control" name="name" id="name" type="text" required placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input class="form-control" name="email" id="email" type="email" required placeholder="Ingrese su Email">
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Edad<span class="clue">(Opcional)</span></label>
+                <input class="form-control" name="number" id="number" type="number" placeholder="Edad" min="10" max="100">
+            </div>
+            <div class="form-group">
+                <label for="comments">Déjanos un comentario</label>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Escribe tu comentario aquí..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Contenido principal aquí -->
+    <div class="footer-wrapper">
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="menu-footer">
+                    <div class="contact-info">
+                        <p class="title-footer">Información de Contacto</p>
+                        <ul>
+                            <li>Dirección: 71 Pennington Lane Vernon Rockville, CT 06066</li>
+                            <li>Teléfono: 123-456-7890</li>
+                            <li>Fax: 55555300</li>
+                            <li>Email: Kintsugi-Store@gmail.com</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="facebook">
+                                <img src="img/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="#" class="twitter">
+                                <img src="img/x.png" alt="Twitter">
+                            </a>
+                            <a href="#" class="youtube">
+                                <img src="img/youtube.png" alt="YouTube">
+                            </a>
+                            <a href="#" class="pinterest">
+                                <img src="img/pinterest.png" alt="Pinterest">
+                            </a>
+                            <a href="#" class="instagram">
+                                <img src="img/instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="information">
+                        <p class="title-footer">Información</p>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Información de Entrega</a></li>
+                            <li><a href="#">Políticas de Privacidad</a></li>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="my-account">
+                        <p class="title-footer">Mi Cuenta</p>
+                        <ul>
+                            <li><a href="#">Mi Cuenta</a></li>
+                            <li><a href="#">Historial de Órdenes</a></li>
+                            <li><a href="#">Lista de Deseos</a></li>
+                            <li><a href="#">Boletín</a></li>
+                            <li><a href="#">Reembolsos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="newsletter">
+                        <p class="title-footer">Boletín</p>
+                        <p>Regístrate para recibir las últimas noticias y actualizaciones directamente en tu bandeja de entrada.</p>
+                        <form class="form-container">
+                            <input type="email" class="newsletter-input" placeholder="Ingresa tu correo electrónico">
+                            <button type="submit" class="subscribe-button">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script  src="js/scripts2.js"></script>    
+        <script  src="js/app.js"></script>    
+        <script  src="js/carrito.js"></script>
+        <script  src="js/compra.js"></script>
+        <script  src="js/contacto.js"></script>
+        <script  src="js/pedido.js"></script>
+        <script  src="js/scipt1.js"></script>
+        <script  src="js/script.js"></script>
+    
+
+
+
+
+</body>
+</html>

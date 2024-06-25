@@ -1,0 +1,640 @@
+/* Importación de la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Estilos generales del cuerpo del documento */
+body {
+    font-family: 'Poppins', sans-serif; /* Utiliza la fuente Poppins */
+    background-color: #000000; /* Color de fondo negro */
+    color: #eee; /* Color de texto blanco */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+}
+
+
+/* Estilos para el contenedor del encabezado */
+.header-container {
+    width: 100%; /* Ancho máximo del contenedor */
+    max-width: 1200px; /* Ancho máximo permitido */
+    margin: auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interior del contenedor */
+    display: flex; /* Utiliza flexbox para disposición */
+    justify-content: space-between; /* Distribuye los elementos alrededor */
+    align-items: center; /* Alinea verticalmente los elementos */
+    position: relative; /* Posición relativa para zIndex */
+    z-index: 100; /* Capa z-index para superposición */
+    gap: 20px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite envolver los elementos en filas adicionales */
+}
+
+/* Estilos para el logo */
+.logo {
+    margin-left: auto; /* Empuja el logo hacia la derecha */
+}
+
+.logo img {
+    width: 300px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción original del logo */
+    margin-top: -30px;
+    
+}
+
+/* Estilos para el área de menú */
+.menu-area {
+    display: flex; /* Utiliza flexbox para disposición */
+    gap: 30px; /* Espacio entre los elementos del menú */
+    margin-left: auto; /* Márgen izquierdo automático */
+}
+
+.menu-area li {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0 10px; /* Márgenes para cada elemento del menú */
+}
+
+.menu-area li a {
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    position: relative; /* Posición relativa para seudoelementos */
+    transition: color 0.3s; /* Transición de color al pasar el cursor */
+}
+
+/* Estilos para los efectos de subrayado */
+.menu-area li a:after,
+.menu-area li a:before {
+    content: ''; /* Contenido vacío para seudoelementos */
+    position: absolute; /* Posición absoluta para seudoelementos */
+    width: 0; /* Ancho inicial cero */
+    height: 2px; /* Altura del subrayado */
+    background: linear-gradient(to right, #ff00cc, #00dbde); /* Gradiente lineal */
+    transition: width 0.3s, opacity 0.3s, left 0.3s; /* Transiciones */
+    opacity: 0; /* Opacidad inicial cero */
+    bottom: -2px; /* Posicionamiento respecto al borde inferior */
+}
+
+.menu-area li a:after {
+    left: 50%; /* Posicionamiento inicial del seudoelemento */
+}
+
+.menu-area li a:before {
+    right: 50%; /* Posicionamiento inicial del seudoelemento */
+}
+
+.menu-area li a:hover:after,
+.menu-area li a:hover:before {
+    width: 100%; /* Ancho completo al pasar el cursor */
+    opacity: 1; /* Opacidad completa al pasar el cursor */
+    left: 0; /* Alineación a la izquierda al pasar el cursor */
+}
+
+/* Estilos para iconos del menú */
+.menu-icons {
+    display: flex; /* Utiliza flexbox para disposición */
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.menu-icons img {
+    width: 30px; /* Tamaño de imagen */
+    height: 30px; /* Altura de imagen */
+    transition: all .3s ease-in-out; /* Transición suave */
+}
+
+.menu-icons img:hover {
+    transform: scale(1.2); /* Aumenta tamaño al pasar el cursor */
+}
+
+
+
+.dj-banner {
+    margin: 10px 0;
+    /* Margen superior de 10px, sin margen lateral ni inferior */
+    width: 100%;
+    /* Ancho del 100% del contenedor padre */
+  }
+  
+  /* Estilo para el fondo del banner */
+  .dj-bg {
+    background-image: url(bg-img-banner.png);
+    /* Imagen de fondo */
+    background-repeat: no-repeat;
+    /* No repetir la imagen de fondo */
+    background-position: center;
+    /* Centrar la imagen de fondo */
+    background-size: cover;
+    /* Escalar la imagen de fondo para cubrir todo el contenedor */
+    width: 100%;
+    /* Ancho del 100% del contenedor padre */
+    height: 500px;
+    /* Altura fija de 400px */
+    margin-top: -30px;
+    position: relative;
+    /* Posición relativa para contener elementos posicionados absolutamente dentro de él */
+  }
+  
+  /* Estilo para la imagen dentro del banner */
+  .dj-img {
+    display: block;
+    /* Hacer que el elemento se comporte como un bloque */
+    width: 100%;
+    /* Ancho del 100% del contenedor padre */
+    height: 100%;
+    /* Altura del 100% del contenedor padre */
+    object-fit: cover;
+    /* Escalar la imagen para cubrir el contenedor sin distorsionar */
+  }
+  
+  /* Estilo para el texto dentro del banner */
+  .dj-banner .dj-text {
+    display: block;
+    text-align: center;
+    /* Alinear el texto al centro */
+    padding: 10px;
+    /* Relleno interno de 10px */
+    position: absolute;
+    /* Posición absoluta para ubicar el texto en un lugar específico dentro del contenedor */
+    top: 60%;
+    /* Posicionar el texto al 50% de la altura del contenedor padre */
+    left: 25%;
+    /* Posicionar el texto más hacia la izquierda del contenedor padre */
+    transform: translate(-50%, -50%);
+    /* Ajustar la posición para centrar completamente el texto */
+    color: #fff;
+    /* Color del texto en blanco para asegurar su visibilidad sobre la imagen */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    /* Efecto de neón */
+  }
+  
+  /* Ajustar la posición y el alineado del texto dentro del banner */
+  .dj-banner .dj-banner-text {
+    display: flex;
+    flex-direction: column;
+    top: 70%;
+    /* Posicionar el texto al 70% de la altura del contenedor padre */
+    left: 37%;
+    /* Posicionar el texto más hacia la derecha del contenedor padre */
+    transform: translate(-50%, -50%);
+    /* Ajustar la posición para centrar completamente el texto */
+    width: 40%;
+    /* Ancho del 40% del contenedor padre */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+  }
+  
+  /* Ajustar el tamaño de la fuente del título dentro del texto del banner */
+  .dj-banner .dj-banner-text h1 {
+    font-size: 40px;
+    /* Tamaño de fuente calculado basado en la anchura de la ventana */
+  }
+  
+  /* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
+  .dj-banner .dj-banner-text p {
+    font-size: 18px;
+    /* Tamaño de fuente calculado basado en la anchura de la ventana */
+  }
+ /* Estilo para la sección Encuentranos */
+.mainEncuentranos {
+    background-color: var(--gris-color);
+    width: 100%; /* Cambiado de 90% a 100% para ocupar todo el ancho disponible */
+    height: 380px;
+    text-align: center;
+    display: flex; /* Usar flexbox para alinear contenido */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    align-items: center; /* Centrar verticalmente el contenido */
+    margin-top: 110px;
+}
+  
+  /* Estilo para el texto dentro de la sección Encuentranos */
+  .textoMapa {
+    margin: 15px;
+    color: #fff;
+    /* Color blanco para el texto */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    /* Efecto de neón */
+    margin-top: 100px;
+  }
+  
+ /* Estilo para el título dentro del texto de la sección Encuentranos */
+.textoMapa h2 {
+    padding: 0;
+    color: var(--azul-color); /* Color azul para el título */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px aqua, 0 0 20px #00f, 0 0 25px aqua, 0 0 30px aqua, 0 0 35px #00f; /* Efecto de neón en azul */
+    font-size: 2rem; /* Tamaño de la fuente ajustado a 2 rem (equivalente a 32px si el tamaño de fuente base es 16px) */
+}
+
+  
+  
+  
+  
+
+
+ /* Estilos para el título "Contáctanos" */
+#title {
+    margin-top: 10px; /* Reducir aún más el margen superior */
+    font-size: 1.5rem; /* Reducir el tamaño del texto */
+    color: #fff; /* Color blanco */
+    text-align: center; /* Alinear al centro */
+    text-shadow: 0 0 5px magenta, 
+                 0 0 10px aqua, 
+                 0 0 15px magenta, 
+                 0 0 20px magenta, 
+                 0 0 25px aqua, 
+                 0 0 30px aqua, 
+                 0 0 35px magenta; /* Efecto de neón */
+}
+
+
+/* Estilos para etiquetas de formulario */
+label {
+    display: flex; /* Mostrar etiquetas como elementos flexibles */
+    align-items: center; /* Alinear elementos verticalmente al centro */
+    font-size: 1.125rem; /* Tamaño de fuente de 1.125 rem */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5 rem */
+}
+
+/* Estilos para elementos de formulario */
+input,
+button,
+select,
+textarea {
+    margin: 0; /* Eliminar márgenes por defecto */
+    font-family: inherit; /* Heredar la fuente del elemento contenedor */
+    font-size: inherit; /* Heredar tamaño de fuente del elemento contenedor */
+    line-height: inherit; /* Heredar altura de línea del elemento contenedor */
+}
+
+/* Estilos específicos para botones */
+button {
+    border: none; /* Eliminar borde de los botones */
+}
+
+
+
+
+
+
+/* Estilos para el contenedor principal */
+.container {
+    width: 70%; /* Ancho completo del contenedor */
+    max-width: 920px; /* Ancho máximo del contenedor */
+    margin: 1rem auto; /* Margen superior e inferior reducido, centrado horizontalmente */
+    padding: 0 1rem; /* Padding horizontal */
+    border-color: #00dbde;
+    margin-top: 180px; /* Ajuste adicional para el margen superior */
+}
+
+/* Estilos para el encabezado */
+.header {
+    padding: 0; /* Padding horizontal */
+    margin-bottom: 2rem; /* Margen inferior del encabezado reducido */
+    font-size: 1.5rem; /* Tamaño de fuente del encabezado */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilos para descripciones */
+.description {
+    font-style: italic; /* Texto en estilo itálico */
+    font-weight: 200; /* Peso de fuente de 200 (ligero) */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); /* Sombra de texto ligera */
+}
+
+/* Estilos para pistas o indicaciones */
+.clue {
+    margin-left: 0.25rem; /* Margen izquierdo de 0.25 rem */
+    font-size: 0.9rem; /* Tamaño de fuente de 0.9 rem */
+    color: #e4e4e4; /* Color de texto gris claro */
+}
+
+/* Estilos para alinear texto al centro */
+.text-center {
+    text-align: center; /* Alinear texto al centro */
+}
+
+/* Estilos para el formulario */
+form {
+    padding: 1.5rem; /* Padding del formulario */
+    border-radius: 0.25rem; /* Borde redondeado */
+    border-color: #00dbde;
+}
+
+/* Estilos para grupos de formulario */
+.form-group {
+    margin-bottom: 1rem; /* Margen inferior del grupo de formulario */
+}
+
+/* Estilos para controles de formulario */
+.form-control {
+    width: 100%; /* Ancho completo */
+    height: 3rem; /* Altura del control */
+    padding: 0.375rem 0.75rem; /* Padding interno */
+    color: #495057; /* Color de texto */
+    background-color: #fff; /* Color de fondo */
+    background-clip: padding-box; /* Fondo en el área del padding */
+    border: 1px solid #ced4da; /* Borde delgado */
+    border-radius: 0.25rem; /* Borde redondeado */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transiciones suaves */
+}
+
+/* Estilos para control de formulario enfocado */
+.form-control:focus {
+    border-color: aqua ; /* Color de borde al estar enfocado */
+    outline: 0; /* Eliminar contorno por defecto */
+    box-shadow: 0 0 0 0.2rem rgba(0, 11, 23, 0.25); /* Sombra ligera */
+}
+
+/* Estilos para radios y checkboxes */
+.input-radio,
+.input-checkbox {
+    display: inline-block; /* Mostrar en línea */
+    margin-right: 0.625rem; /* Margen derecho */
+    min-height: 1.25rem; /* Altura mínima */
+    min-width: 1.25rem; /* Ancho mínimo */
+}
+
+/* Estilos para textarea */
+.input-textarea {
+    min-height: 120px; /* Altura mínima */
+    width: 100%; /* Ancho completo */
+    padding: 0.625rem; /* Padding interno */
+    resize: vertical; /* Permitir redimensionamiento vertical */
+}
+
+/* Estilos para botón de enviar */
+.submit-button {
+    display: block; /* Mostrar como bloque */
+    width: 100%; /* Ancho completo */
+    padding: 0.75rem; /* Padding */
+    background-color: #38b000; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Eliminar borde */
+    border-radius: 0.25rem; /* Borde redondeado */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilos para el estado hover del botón de enviar */
+.submit-button:hover {
+    background-color: #2c7a00; /* Color de fondo al pasar el mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #ec40e452;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Ajustar el contenedor del footer para ocupar todo el ancho */
+.container-footer {
+    width: 100%; /* Ocupar todo el ancho */
+    margin: 0; /* Eliminar márgenes */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espacio entre elementos reducido */
+    padding: 0 1rem; /* Ajuste de padding izquierdo y derecho */
+}
+
+.menu-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ancho mínimo de columnas reducido */
+    gap: 2rem; /* Espacio entre columnas reducido */
+    justify-items: center;
+}
+
+.title-footer {
+    font-weight: 600;
+    font-size: 1.4rem; /* Tamaño de fuente reducido */
+    text-transform: uppercase;
+    margin-bottom: 1rem; /* Margen inferior para el título reducido */
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre elementos reducido */
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita el padding de la lista */
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+    color: #fff;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+    font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+    color: #f16ddbbe; /* Cambia el color al hacer hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem; /* Espacio entre íconos de redes sociales reducido */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 2.5rem; /* Tamaño de íconos de redes sociales reducido */
+    height: 2.5rem; /* Tamaño de íconos de redes sociales reducido */
+    border-radius: 50%; /* Borde redondeado */
+}
+
+.content p {
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+    font-weight: 300;
+}
+
+.content input {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ff00cc;
+    cursor: pointer;
+    padding: 0.5rem 0 1rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 2rem; /* Margen inferior reducido */
+    width: 100%;
+    font-family: inherit;
+}
+
+.content input::placeholder {
+    color: #eee; /* Cambia el color del placeholder */
+}
+
+.content button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem; /* Tamaño de botón reducido */
+    border-radius: 2rem;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.content button:hover {
+    background-color: #ff00cc; /* Cambia el color al hacer hover */
+    color: #fff;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem; /* Padding superior reducido */
+    border-top: 1px solid #00dbde;
+}
+
+.footer a {
+    color: #00dbde;
+}
+
+.footer a:hover {
+    color: #ff00cc;
+}
+
+/* Continuación del CSS */
+
+/* Estilos para la sección de contenido principal */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto; /* Márgen superior e inferior, centrado horizontalmente */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para los encabezados principales */
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    color: #fff;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #00dbde;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff00cc;
+}
+
+/* Estilos para los botones */
+button, .btn {
+    background: linear-gradient(to right, #ff00cc, #00dbde);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(to right, #00dbde, #ff00cc);
+}
+
+/* Estilos para los formularios */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00dbde;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Ajustes para los contenedores flex */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.flex-item {
+    background-color: #00dbde;
+    color: #ff00cc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* Tres columnas con márgenes */
+}
+
